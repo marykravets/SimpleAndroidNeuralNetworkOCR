@@ -23,6 +23,10 @@ android {
     }
     productFlavors {
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
@@ -35,4 +39,6 @@ dependencies {
     implementation files('libs/neuroph-core-2.94.jar')
     implementation files('libs/neuroph-imgrec-2.94.jar')
     implementation files('libs/neuroph-ocr-2.94.jar')
+
+    implementation 'org.tensorflow:tensorflow-android:+'
 }

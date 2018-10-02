@@ -33,8 +33,14 @@ public class WritingView extends View {
     private Paint mPaint;
     private Path mPath;
     private Canvas mCanvas;
+    private Bitmap newBitmap;
 
     private NeuralNetwork nnet;
+
+    public Bitmap getBitmap() {
+        return newBitmap;
+    }
+
     private final Runnable loadDataRunnable = new Runnable() {
         public void run() {
             InputStream irs = getResources().openRawResource(R.raw.m1);
@@ -60,7 +66,7 @@ public class WritingView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
-        mPaint.setStrokeWidth(50);
+        mPaint.setStrokeWidth(25);
         mPath = new Path();
         mCanvas = new Canvas();
     }
@@ -117,7 +123,7 @@ public class WritingView extends View {
         Bitmap  bitmap = BitmapFactory.decodeStream(is);
         */
         Bitmap b2 = Bitmap.createScaledBitmap(BitmapUtils.cropCharacterArea(getDrawingCache()), 40, 40, false);
-        Bitmap newBitmap = Bitmap.createBitmap(b2.getWidth(), b2.getHeight(), b2.getConfig());
+        newBitmap = Bitmap.createBitmap(b2.getWidth(), b2.getHeight(), b2.getConfig());
         Canvas canvas = new Canvas(newBitmap);
         canvas.drawColor(Color.WHITE);
         canvas.drawBitmap(b2, 0, 0, null);
@@ -136,7 +142,7 @@ public class WritingView extends View {
         }
         this.setDrawingCacheEnabled(false);
         b2.recycle();
-        newBitmap.recycle();
+
         return characterVerify(file);
     }
 
