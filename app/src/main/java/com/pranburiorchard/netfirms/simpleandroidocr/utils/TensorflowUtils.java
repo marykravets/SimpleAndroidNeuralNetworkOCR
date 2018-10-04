@@ -10,8 +10,7 @@ import com.pranburiorchard.netfirms.simpleandroidocr.tensorflow.ColorConverter;
 public class TensorflowUtils {
 
     public static float[] createInputPixels(int[] pixels) {
-        float[] normalized = ColorConverter.convertToTfFormat(pixels);
-        return normalized;
+        return ColorConverter.convertToTfFormat(pixels);
     }
 
     public static void classifyData(Classifier classifier, Context ctx, float[] retPixels) {

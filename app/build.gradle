@@ -40,5 +40,5 @@ dependencies {
     implementation files('libs/neuroph-imgrec-2.94.jar')
     implementation files('libs/neuroph-ocr-2.94.jar')
 
-    implementation 'org.tensorflow:tensorflow-android:+'
+    implementation 'org.tensorflow:tensorflow-android:1.11.0'
 }

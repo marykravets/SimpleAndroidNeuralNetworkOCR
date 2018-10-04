@@ -31,9 +31,8 @@ public class Classifier {
     private float[] output;
     private String[] outputNames;
 
-    static private List<String> readLabels(Classifier c, AssetManager am, String fileName) throws IOException {
-        BufferedReader br = null;
-        br = new BufferedReader(new InputStreamReader(am.open(fileName)));
+    static private List<String> readLabels(AssetManager am, String fileName) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(am.open(fileName)));
 
         String line;
         List<String> labels = new ArrayList<>();
@@ -56,7 +55,7 @@ public class Classifier {
         classifier.outputName = outputName;
 
         String labelFile = labelPath.split("file:///android_asset/")[1];
-        classifier.labels = readLabels(classifier, assetManager, labelFile);
+        classifier.labels = readLabels(assetManager, labelFile);
 
         classifier.tfHelper = new TensorFlowInferenceInterface(assetManager, modelPath);
 
@@ -72,7 +71,7 @@ public class Classifier {
     }
 
     public Classification recognize(final float[] pixels) {
-        tfHelper.feed(inputName, pixels, new long[]{inputSize * inputSize});
+        tfHelper.feed(inputName, pixels, inputSize * inputSize);
         tfHelper.run(outputNames);
         tfHelper.fetch(outputName, output);
 

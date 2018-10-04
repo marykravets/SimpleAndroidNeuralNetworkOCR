@@ -9,10 +9,6 @@ public class Classification {
     private float conf;
     private String label;
 
-    public Classification(float conf, String label) {
-        update(conf, label);
-    }
-
     public Classification() {
         this.conf = (float)-1.0;
         this.label = null;
