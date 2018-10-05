@@ -23,6 +23,7 @@ public class Classifier {
 
     private TensorFlowInferenceInterface tfHelper;
 
+    private String name;
     private String inputName;
     private String outputName;
     private int inputSize;
@@ -51,6 +52,7 @@ public class Classifier {
 
         Classifier classifier = new Classifier();
 
+        classifier.name = "TensorFlow";
         classifier.inputName = inputName;
         classifier.outputName = outputName;
 
@@ -71,9 +73,18 @@ public class Classifier {
     }
 
     public Classification recognize(final float[] pixels) {
-        tfHelper.feed(inputName, pixels, inputSize * inputSize);
+        /*tfHelper.feed(inputName, pixels, inputSize * inputSize);
         tfHelper.run(outputNames);
+        tfHelper.fetch(outputName, output);*/
+
+        //work with opt_mnist_convert_tf.pb
+        tfHelper.feed(inputName, pixels, 1, inputSize, inputSize, 1);
+        tfHelper.feed("keep_prob", new float[] { 1 });
+        //get the possible outputs
+        tfHelper.run(outputNames);
+        //get the output
         tfHelper.fetch(outputName, output);
+
 
         // Find the best classification
         Classification ans = new Classification();

@@ -66,7 +66,7 @@ public class WritingView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
-        mPaint.setStrokeWidth(25);
+        mPaint.setStrokeWidth(50);
         mPath = new Path();
         mCanvas = new Canvas();
     }

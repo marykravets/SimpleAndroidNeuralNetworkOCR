@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String INPUT_NAME = "input";
     private static final String OUTPUT_NAME = "output";
 
-    private static final String MODEL_FILE = "file:///android_asset/expert-graph.pb";
+    //private static final String MODEL_FILE = "expert-graph.pb";
+    private static final String MODEL_FILE = "opt_mnist_convnet-tf.pb";
     private static final String LABEL_FILE = "file:///android_asset/labels.txt";
 
     private WritingView wv;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     private void loadModel() {
         executor.execute(() -> {
             try {
-                classifier = Classifier.create(getApplicationContext().getAssets(),
+                classifier = Classifier.create(getAssets(),
                         MODEL_FILE,
                         LABEL_FILE,
                         INPUT_SIZE,
