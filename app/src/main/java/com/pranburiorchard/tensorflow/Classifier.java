@@ -1,4 +1,4 @@
-package com.pranburiorchard.netfirms.simpleandroidocr.tensorflow;
+package com.pranburiorchard.tensorflow;
 
 import android.content.res.AssetManager;
 import android.util.Log;

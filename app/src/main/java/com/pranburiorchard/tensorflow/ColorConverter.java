@@ -1,4 +1,4 @@
-package com.pranburiorchard.netfirms.simpleandroidocr.tensorflow;
+package com.pranburiorchard.tensorflow;
 
 public class ColorConverter {
     public static float[] convertToTfFormat(int[] argbPixels) {

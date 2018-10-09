@@ -1,4 +1,4 @@
-package com.pranburiorchard.netfirms.simpleandroidocr;
+package com.pranburiorchard;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -12,9 +12,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.pranburiorchard.netfirms.simpleandroidocr.customview.WritingView;
-import com.pranburiorchard.netfirms.simpleandroidocr.tensorflow.Classifier;
-import com.pranburiorchard.netfirms.simpleandroidocr.utils.TensorflowUtils;
+import com.pranburiorchard.customview.WritingView;
+import com.pranburiorchard.tensorflow.Classifier;
+import com.pranburiorchard.utils.TensorflowUtils;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

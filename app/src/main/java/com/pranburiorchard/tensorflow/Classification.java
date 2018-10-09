@@ -1,4 +1,4 @@
-package com.pranburiorchard.netfirms.simpleandroidocr.tensorflow;
+package com.pranburiorchard.tensorflow;
 
 /**
  * Created by marianne-linhares on 20/04/17.

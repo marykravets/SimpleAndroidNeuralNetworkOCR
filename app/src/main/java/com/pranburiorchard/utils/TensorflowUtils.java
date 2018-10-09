@@ -1,11 +1,11 @@
-package com.pranburiorchard.netfirms.simpleandroidocr.utils;
+package com.pranburiorchard.utils;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.pranburiorchard.netfirms.simpleandroidocr.tensorflow.Classification;
-import com.pranburiorchard.netfirms.simpleandroidocr.tensorflow.Classifier;
-import com.pranburiorchard.netfirms.simpleandroidocr.tensorflow.ColorConverter;
+import com.pranburiorchard.tensorflow.Classification;
+import com.pranburiorchard.tensorflow.Classifier;
+import com.pranburiorchard.tensorflow.ColorConverter;
 
 public class TensorflowUtils {
 

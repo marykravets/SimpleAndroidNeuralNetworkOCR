@@ -1,4 +1,4 @@
-package com.pranburiorchard.netfirms.simpleandroidocr.customview;
+package com.pranburiorchard.customview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,8 +11,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.pranburiorchard.netfirms.simpleandroidocr.R;
-import com.pranburiorchard.netfirms.simpleandroidocr.utils.BitmapUtils;
+import com.pranburiorchard.R;
+import com.pranburiorchard.utils.BitmapUtils;
 
 import org.neuroph.core.NeuralNetwork;
 import org.neuroph.imgrec.ImageRecognitionPlugin;

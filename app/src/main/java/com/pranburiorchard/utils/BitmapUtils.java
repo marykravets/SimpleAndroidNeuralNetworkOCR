@@ -1,4 +1,4 @@
-package com.pranburiorchard.netfirms.simpleandroidocr.utils;
+package com.pranburiorchard.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
